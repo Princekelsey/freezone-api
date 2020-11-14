@@ -78,7 +78,11 @@ const server = app.listen(PORT, () => {
   );
 });
 
-const io = require("socket.io")(server);
+const options = {
+  cors: true,
+};
+
+const io = require("socket.io")(server, options);
 
 // step up socket webHooks
 
